@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap");
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 전체 랩 */
+.clock-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 아날로그 시계 */
+.clock {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 10px solid #ffd6e8;
+  background: #fff0f6;
+  position: relative;
+  box-shadow: 0 0 25px rgba(255, 182, 213, 0.6);
+}
+
+/* 바늘 */
+.hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%);
+  border-radius: 999px;
+}
+
+.hour {
+  width: 8px;
+  height: 45px;
+  background: #ff8fb1;
+}
+
+.minute {
+  width: 5px;
+  height: 65px;
+  background: #ffb3c7;
+}
+
+/* 중심 점 */
+.center-dot {
+  width: 12px;
+  height: 12px;
+  background: #ff6f9f;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 디지털 */
+.digital {
+  font-family: "Orbitron", monospace;
+  font-size: 20px;
+  letter-spacing: 2px;
+
+  color: #ff6fae;
+  background: #ffffff;
+
+  padding: 6px 18px;
+  border-radius: 999px;
+
+  text-shadow:
+    0 0 4px rgba(255, 111, 174, 0.9),
+    0 0 10px rgba(255, 182, 213, 0.8),
+    0 0 18px rgba(255, 182, 213, 0.6);
+
+  box-shadow:
+    inset 0 0 8px rgba(255, 182, 213, 0.5),
+    0 0 12px rgba(255, 182, 213, 0.6);
+}
